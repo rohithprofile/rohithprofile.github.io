@@ -11,10 +11,10 @@ An interactive, zero-build personal engineering portfolio featuring an ASCII mar
 
 ## 🌐 Live Deployments
 
-- **Primary Site**: [https://rohith2157.github.io/](https://rohith2157.github.io/)
-- **Project Mirror**: [https://rohith2157.github.io/portfolio/](https://rohith2157.github.io/portfolio/)
-- **Alternate Route**: [https://rohith2157.github.io/rohith/](https://rohith2157.github.io/rohith/)
-- **GitHub Repository**: [github.com/rohith2157/portfolio](https://github.com/rohith2157/portfolio)
+- **Named Portfolio**: [https://rohith2157.github.io/rohithport/](https://rohith2157.github.io/rohithport/)
+- **Primary Root**: [https://rohith2157.github.io/](https://rohith2157.github.io/)
+- **Repository Mirror**: [https://rohith2157.github.io/portfolio/](https://rohith2157.github.io/portfolio/)
+- **GitHub Repository**: [github.com/rohith2157/rohithport](https://github.com/rohith2157/rohithport)
 
 ---
 
