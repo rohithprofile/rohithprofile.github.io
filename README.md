@@ -1,8 +1,8 @@
 # Maheshwaram Rohith — AI/ML Engineer Portfolio
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-rohith2157.github.io-2ea44f?style=flat-square&logo=github)](https://rohith2157.github.io/)
-[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-blue?style=flat-square&logo=github)](https://rohith2157.github.io/)
-[![Zero Build](https://img.shields.io/badge/Architecture-Zero--Build%20Static-informational?style=flat-square)](https://github.com/rohith2157/portfolio)
+[![Live Site](https://img.shields.io/badge/Live%20Site-rohithprofile.github.io-2ea44f?style=flat-square&logo=github)](https://rohithprofile.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-blue?style=flat-square&logo=github)](https://rohithprofile.github.io/)
+[![Zero Build](https://img.shields.io/badge/Architecture-Zero--Build%20Static-informational?style=flat-square)](https://github.com/rohithprofile/rohithprofile.github.io)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](LICENSE)
 
 An interactive, zero-build personal engineering portfolio featuring an ASCII marine life physics simulation, client-side automated job-fit analysis, live in-browser WCAG accessibility audits, and real-time GitHub repository telemetry.
@@ -11,10 +11,9 @@ An interactive, zero-build personal engineering portfolio featuring an ASCII mar
 
 ## 🌐 Live Deployments
 
-- **Named Portfolio**: [https://rohith2157.github.io/rohithport/](https://rohith2157.github.io/rohithport/)
-- **Primary Root**: [https://rohith2157.github.io/](https://rohith2157.github.io/)
-- **Repository Mirror**: [https://rohith2157.github.io/portfolio/](https://rohith2157.github.io/portfolio/)
-- **GitHub Repository**: [github.com/rohith2157/rohithport](https://github.com/rohith2157/rohithport)
+- **Official Portfolio**: [https://rohithprofile.github.io/](https://rohithprofile.github.io/)
+- **GitHub Repository**: [github.com/rohithprofile/rohithprofile.github.io](https://github.com/rohithprofile/rohithprofile.github.io)
+- **Personal Account Mirror**: [https://rohith2157.github.io/](https://rohith2157.github.io/)
 
 ---
 
