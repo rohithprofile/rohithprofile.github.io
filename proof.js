@@ -668,6 +668,7 @@
       [" · "], [tally.bad + " failed", tally.bad ? "t-bad" : "t-dim"], ["   ran in " + seconds + " s", "t-dim"]]);
     print([["the full version crawls any url with 6 agents → ", "t-dim"], ["github.com/rohith2157/BUGZERO", "", L.bugzero]]);
     auditStatus.textContent = "audit finished: " + tally.ok + " passed, " + tally.warn + " warnings, " + tally.bad + " failed";
+    var copyReportBtn = document.getElementById("audit-copy-btn"); if (copyReportBtn) copyReportBtn.hidden = false;
     auditBtn.disabled = false;
     auditBtn.textContent = "run again ▶";
   }

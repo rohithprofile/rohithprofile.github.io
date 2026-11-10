@@ -198,4 +198,92 @@
     });
   }
   syncGithub();
+
+  /* ---------- interactive project filtering ---------- */
+  var filterButtons = document.querySelectorAll(".p-filter");
+  var projectCards = document.querySelectorAll(".project");
+
+  filterButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      filterButtons.forEach(function (b) {
+        b.classList.remove("is-active");
+        b.setAttribute("aria-selected", "false");
+      });
+      btn.classList.add("is-active");
+      btn.setAttribute("aria-selected", "true");
+
+      var cat = btn.getAttribute("data-filter");
+      projectCards.forEach(function (card) {
+        if (cat === "all" || card.getAttribute("data-category") === cat) {
+          card.classList.remove("is-hidden");
+        } else {
+          card.classList.add("is-hidden");
+        }
+      });
+    });
+  });
+
+  /* ---------- clipboard toast feedback ---------- */
+  var toastEl = document.createElement("div");
+  toastEl.className = "toast-notice";
+  toastEl.textContent = "email copied to clipboard!";
+  document.body.appendChild(toastEl);
+
+  var toastTimer = null;
+  function showToast(msg) {
+    toastEl.textContent = msg || "copied to clipboard!";
+    toastEl.classList.add("is-visible");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () {
+      toastEl.classList.remove("is-visible");
+    }, 2400);
+  }
+
+  function copyEmailHandler() {
+    var email = "maheshwaramrohith2157@gmail.com";
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(function () {
+        showToast("email copied to clipboard: " + email);
+      }).catch(function () {
+        showToast("copied: " + email);
+      });
+    } else {
+      showToast("email: " + email);
+    }
+  }
+
+  var heroCopy = document.getElementById("hero-copy-email");
+  if (heroCopy) heroCopy.addEventListener("click", copyEmailHandler);
+
+  var contactCopy = document.getElementById("contact-copy-btn");
+  if (contactCopy) contactCopy.addEventListener("click", copyEmailHandler);
+
+  /* ---------- copy audit report ---------- */
+  var auditCopyBtn = document.getElementById("audit-copy-btn");
+  var termEl = document.getElementById("audit-log");
+  if (auditCopyBtn && termEl) {
+    auditCopyBtn.addEventListener("click", function () {
+      var text = termEl.innerText || termEl.textContent;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          showToast("audit report copied!");
+        });
+      }
+    });
+  }
+
+  /* ---------- clear JD button ---------- */
+  var jdClear = document.getElementById("jd-clear-btn");
+  var jdTextarea = document.getElementById("jd");
+  var fitResult = document.getElementById("fit-result");
+  if (jdClear && jdTextarea) {
+    jdClear.addEventListener("click", function () {
+      jdTextarea.value = "";
+      if (fitResult) {
+        fitResult.hidden = true;
+        fitResult.innerHTML = "";
+      }
+      jdTextarea.focus();
+    });
+  }
 })();

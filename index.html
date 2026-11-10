@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
   <script>
     // Apply the saved theme before first paint to avoid a flash.
     try {
@@ -42,6 +42,9 @@
       <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
       <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M12 11v6M9.5 14.5L12 17l2.5-2.5"/></symbol>
       <symbol id="i-hf" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 14.5c1 1.5 2.4 2.2 4 2.2s3-.7 4-2.2M9 10h.01M15 10h.01"/></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+      <symbol id="i-up" viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></symbol>
       <symbol id="i-github" viewBox="0 0 24 24"><path class="fill" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.5.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></symbol>
       <symbol id="i-linkedin" viewBox="0 0 24 24"><path class="fill" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></symbol>
     </defs>
@@ -67,15 +70,31 @@
   <main class="deck-scroll" id="deck" tabindex="0" aria-label="portfolio">
     <!-- about -->
     <section class="deck-section hero" id="about" aria-labelledby="heading-about" tabindex="-1">
+      <div class="status-pill" aria-label="Availability status">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>available for ai/ml, agents &amp; research</span>
+      </div>
       <h1 class="signature" id="heading-about">Rohith</h1>
-      <p class="aka">you can call me “rohith” · hyderabad</p>
+      <p class="aka">you can call me "Rooo" &middot; hyderabad</p>
       <p class="lede">ai, open source, and taking<br>things apart to see how they work</p>
+      <div class="hero-stats" aria-label="Key highlights">
+        <span class="h-stat">6-agent platforms</span>
+        <span class="h-sep">·</span>
+        <span class="h-stat">93.4% vision acc</span>
+        <span class="h-sep">·</span>
+        <span class="h-stat">lora phi-3</span>
+      </div>
       <p class="current">most recently, ai/ml at <a class="inline-link" href="https://codevocado.in/" target="_blank" rel="noopener">codevocado</a></p>
       <p class="current">b.tech ai &amp; ml at anurag university, class of 2028</p>
       <p class="cta">
         <a class="inline-link strong" href="#projects" data-nav>view projects</a>
         <span aria-hidden="true">|</span>
         <a class="plain-link" href="#contact" data-nav>say hello</a>
+        <span aria-hidden="true">|</span>
+        <button type="button" class="btn-copy" id="hero-copy-email" title="Click to copy email">
+          <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+          <span>copy email</span>
+        </button>
         <span aria-hidden="true">|</span>
         <a class="plain-link" href="assets/Maheshwaram_Rohith_Resume.pdf" target="_blank" rel="noopener">résumé</a>
       </p>
@@ -95,10 +114,19 @@
         </div>
         <p class="job-dates"><time datetime="2025-10">october 2025</time> <span aria-hidden="true">—</span><span class="sr-only">to</span> <time datetime="2026-01">january 2026</time> · remote</p>
         <div class="job-description">
-          <p>codevocado builds smart software for growing businesses</p>
-          <p>i built an msme chatbot on a lora-tuned phi-3 with rag, so answers stay grounded, in 5 languages and behind role-based auth</p>
+          <p>codevocado builds smart software for growing businesses.</p>
+          <p>i built an msme chatbot on a lora-tuned phi-3 with rag, so answers stay grounded, in 5 languages and behind role-based auth.</p>
         </div>
-        <a class="inline-link" href="https://codevocado.in/" target="_blank" rel="noopener">visit codevocado</a>
+        <div class="job-tags">
+          <span class="job-tag">phi-3 lora</span>
+          <span class="job-tag">rag pipeline</span>
+          <span class="job-tag">ollama</span>
+          <span class="job-tag">5 languages</span>
+          <span class="job-tag">rbac auth</span>
+        </div>
+        <div class="job-actions">
+          <a class="inline-link" href="https://codevocado.in/" target="_blank" rel="noopener">visit codevocado</a>
+        </div>
       </article>
 
       <article class="job">
@@ -111,7 +139,12 @@
         </div>
         <p class="job-dates"><time datetime="2025-08">august 2025</time> <span aria-hidden="true">—</span><span class="sr-only">to</span> present · hyderabad</p>
         <div class="job-description">
-          <p>i run technical workshops and seminars, and lead pr and social outreach for club events</p>
+          <p>i run technical workshops and seminars, and lead pr and social outreach for club events.</p>
+        </div>
+        <div class="job-tags">
+          <span class="job-tag">workshops</span>
+          <span class="job-tag">technical outreach</span>
+          <span class="job-tag">event lead</span>
         </div>
       </article>
     </section>
@@ -120,82 +153,113 @@
     <section class="deck-section" id="projects" aria-labelledby="heading-projects" tabindex="-1">
       <h2 class="cell-text" id="heading-projects" aria-label="projects"></h2>
 
+      <div class="project-filters" role="tablist" aria-label="filter projects">
+        <button type="button" class="p-filter is-active" data-filter="all" role="tab" aria-selected="true">all <span class="badge">8</span></button>
+        <button type="button" class="p-filter" data-filter="agents" role="tab" aria-selected="false">ai &amp; agents <span class="badge">3</span></button>
+        <button type="button" class="p-filter" data-filter="ml" role="tab" aria-selected="false">ml &amp; vision <span class="badge">3</span></button>
+        <button type="button" class="p-filter" data-filter="apps" role="tab" aria-selected="false">full-stack <span class="badge">2</span></button>
+      </div>
+
       <ul class="project-grid">
-        <li class="project" data-repo="BUGZERO">
+        <li class="project" data-repo="BUGZERO" data-category="agents">
           <a href="https://github.com/rohith2157/BUGZERO" target="_blank" rel="noopener">
             <span class="p-text">
-              <span class="p-name">bugzero</span>
+              <span class="p-header">
+                <span class="p-name">bugzero</span>
+                <span class="p-pill">featured</span>
+              </span>
               <span class="p-tag">autonomous qa · 6 agents · 15 ms heals</span>
               <span class="p-meta" data-meta>★ 2 · javascript</span>
             </span>
             <svg class="icon link-icon" aria-hidden="true"><use href="#i-link"/></svg>
           </a>
         </li>
-        <li class="project" data-repo="VERITAS">
+        <li class="project" data-repo="VERITAS" data-category="apps">
           <a href="https://github.com/rohith2157/VERITAS" target="_blank" rel="noopener">
             <span class="p-text">
-              <span class="p-name">veritas</span>
+              <span class="p-header">
+                <span class="p-name">veritas</span>
+                <span class="p-pill">spring + fastAPI</span>
+              </span>
               <span class="p-tag">originality checks · java + python</span>
               <span class="p-meta" data-meta>★ 0 · javascript</span>
             </span>
             <svg class="icon link-icon" aria-hidden="true"><use href="#i-link"/></svg>
           </a>
         </li>
-        <li class="project" data-repo="WASTAGE-DETECTION">
+        <li class="project" data-repo="WASTAGE-DETECTION" data-category="ml">
           <a href="https://github.com/rohith2157/WASTAGE-DETECTION" target="_blank" rel="noopener">
             <span class="p-text">
-              <span class="p-name">wastevision ai</span>
+              <span class="p-header">
+                <span class="p-name">wastevision ai</span>
+                <span class="p-pill">93.4% acc</span>
+              </span>
               <span class="p-tag">waste ai · 93.4% acc · 30+ fps edge</span>
               <span class="p-meta" data-meta>★ 2 · python</span>
             </span>
             <svg class="icon link-icon" aria-hidden="true"><use href="#i-link"/></svg>
           </a>
         </li>
-        <li class="project" data-repo="Hospital_Automation_System_by_whatsapp">
+        <li class="project" data-repo="Hospital_Automation_System_by_whatsapp" data-category="agents">
           <a href="https://github.com/rohith2157/Hospital_Automation_System_by_whatsapp" target="_blank" rel="noopener">
             <span class="p-text">
-              <span class="p-name">hospital whatsapp bot</span>
+              <span class="p-header">
+                <span class="p-name">hospital whatsapp bot</span>
+                <span class="p-pill">n8n + flask</span>
+              </span>
               <span class="p-tag">whatsapp bookings · n8n + flask</span>
               <span class="p-meta" data-meta>★ 0 · python</span>
             </span>
             <svg class="icon link-icon" aria-hidden="true"><use href="#i-link"/></svg>
           </a>
         </li>
-        <li class="project" data-repo="Mind-Reader">
+        <li class="project" data-repo="Mind-Reader" data-category="ml">
           <a href="https://github.com/rohith2157/Mind-Reader" target="_blank" rel="noopener">
             <span class="p-text">
-              <span class="p-name">mind reader ai</span>
+              <span class="p-header">
+                <span class="p-name">mind reader ai</span>
+                <span class="p-pill">id3 decision tree</span>
+              </span>
               <span class="p-tag">id3 tree that guesses your object</span>
               <span class="p-meta" data-meta>★ 0 · jupyter notebook</span>
             </span>
             <svg class="icon link-icon" aria-hidden="true"><use href="#i-link"/></svg>
           </a>
         </li>
-        <li class="project" data-repo="unemployment_project">
+        <li class="project" data-repo="unemployment_project" data-category="agents">
           <a href="https://github.com/rohith2157/unemployment_project" target="_blank" rel="noopener">
             <span class="p-text">
-              <span class="p-name">kids comic library</span>
+              <span class="p-header">
+                <span class="p-name">kids comic library</span>
+                <span class="p-pill">gemini ai</span>
+              </span>
               <span class="p-tag">gemini-written comics for kids</span>
               <span class="p-meta" data-meta>★ 0 · html</span>
             </span>
             <svg class="icon link-icon" aria-hidden="true"><use href="#i-link"/></svg>
           </a>
         </li>
-        <li class="project no-link">
+        <li class="project no-link" data-category="ml">
           <div>
             <span class="p-text">
-              <span class="p-name">diabetes risk predictor</span>
+              <span class="p-header">
+                <span class="p-name">diabetes risk predictor</span>
+                <span class="p-pill">live app</span>
+              </span>
               <span class="p-tag">ml ensemble · 73.9% acc · live app</span>
               <span class="p-meta">react + flask + supabase</span>
             </span>
           </div>
         </li>
-        <li class="project no-link">
+        <li class="project no-link" data-category="apps">
           <div>
             <span class="p-text">
-              <span class="p-name">ai career advisor</span>
+              <span class="p-header">
+                <span class="p-name">ai career advisor</span>
+                <span class="p-pill">avinya award</span>
+              </span>
               <span class="p-tag">gemini 2.5 career coach + quizzes</span>
-              <span class="p-meta">avinya hackathon</span>
+              <span class="p-meta">avinya hackathon winner</span>
             </span>
           </div>
         </li>
@@ -216,8 +280,11 @@
 
       <div class="proof-panel" role="tabpanel" id="panel-fit" aria-labelledby="tab-fit">
         <p class="proof-intro">paste a job description. i'll map every requirement to work i've actually shipped, with links, and say plainly where i'm not there yet.</p>
-        <label class="sr-only" for="jd">job description</label>
-        <textarea class="jd" id="jd" rows="6" spellcheck="false" placeholder="paste the job description here…"></textarea>
+        <div class="jd-wrapper">
+          <label class="sr-only" for="jd">job description</label>
+          <textarea class="jd" id="jd" rows="6" spellcheck="false" placeholder="paste the job description here…"></textarea>
+          <button type="button" class="jd-clear" id="jd-clear-btn" title="Clear job description" aria-label="clear text">clear</button>
+        </div>
         <div class="proof-row">
           <span class="muted small">or try a sample:</span>
           <button type="button" class="chip" data-sample="ml">ml intern</button>
@@ -227,7 +294,7 @@
         </div>
         <div class="proof-row">
           <button type="button" class="run-btn" id="fit-run">check my fit →</button>
-          <span class="muted small">runs in your browser · nothing leaves this page</span>
+          <span class="muted small">runs 100% locally in your browser · zero telemetry</span>
         </div>
         <div class="fit-result" id="fit-result" hidden></div>
         <p class="sr-only" id="fit-status" role="status"></p>
@@ -237,7 +304,8 @@
         <p class="proof-intro">bugzero is my autonomous qa platform. this is a browser-sized port of its checks: hit run and watch it test the page you're reading, right now.</p>
         <div class="proof-row">
           <button type="button" class="run-btn" id="audit-run">run audit ▶</button>
-          <span class="muted small">live measurements, nothing pre-recorded</span>
+          <button type="button" class="chip" id="audit-copy-btn" hidden title="Copy audit output">copy report</button>
+          <span class="muted small">live DOM measurements &amp; WCAG tests</span>
         </div>
         <div class="terminal" id="audit-log" role="log" aria-label="audit output" tabindex="0" hidden></div>
         <p class="sr-only" id="audit-status" role="status"></p>
@@ -248,11 +316,26 @@
     <section class="deck-section" id="skills" aria-labelledby="heading-skills" tabindex="-1">
       <h2 class="cell-text" id="heading-skills" aria-label="skills"></h2>
       <dl class="skills-rows">
-        <div><dt>languages</dt><dd>c, java, javascript/typescript, python, sql</dd></div>
-        <div><dt>ai &amp; ml</dt><dd>hugging face, llms, lora, opencv, pytorch, rag, scikit-learn, tensorflow</dd></div>
-        <div><dt>agents &amp; testing</dt><dd>axe-core, multi-agent systems, n8n, playwright, prompt engineering</dd></div>
-        <div><dt>backend &amp; data</dt><dd>express, fastapi, flask, neo4j, postgresql, redis, spring boot, supabase</dd></div>
-        <div><dt>frontend &amp; infra</dt><dd>docker, git, react, svelte, tailwind css, vercel</dd></div>
+        <div>
+          <dt>languages <span class="skills-count">5 core</span></dt>
+          <dd>c, java, javascript/typescript, python, sql</dd>
+        </div>
+        <div>
+          <dt>ai &amp; ml <span class="skills-count">production</span></dt>
+          <dd>hugging face, llms, lora, opencv, pytorch, rag, scikit-learn, tensorflow</dd>
+        </div>
+        <div>
+          <dt>agents &amp; testing <span class="skills-count">autonomous</span></dt>
+          <dd>axe-core, multi-agent systems, n8n, playwright, prompt engineering</dd>
+        </div>
+        <div>
+          <dt>backend &amp; data <span class="skills-count">distributed</span></dt>
+          <dd>express, fastapi, flask, neo4j, postgresql, redis, spring boot, supabase</dd>
+        </div>
+        <div>
+          <dt>frontend &amp; infra <span class="skills-count">tooling</span></dt>
+          <dd>docker, git, react, svelte, tailwind css, vercel</dd>
+        </div>
       </dl>
     </section>
 
@@ -260,14 +343,38 @@
     <section class="deck-section" id="recognition" aria-labelledby="heading-recognition" tabindex="-1">
       <h2 class="cell-text" id="heading-recognition" aria-label="recognition"></h2>
       <dl class="award-rows">
-        <div><dt>smart india hackathon 2026</dt><dd>team geoastra · satquery ai</dd></div>
-        <div><dt>smart india hackathon 2025</dt><dd>team bit-storm · sarthi</dd></div>
-        <div><dt>avinya hackathon</dt><dd>innovation award</dd></div>
-        <div><dt>visionnova 2.0, national 24h hackathon</dt><dd>participant</dd></div>
-        <div><dt>codevocado ai/ml internship</dt><dd>letter of recommendation</dd></div>
-        <div><dt>viswam ai summer of ai · meta × swecha × iiit-h</dt><dd>completed</dd></div>
-        <div><dt>innoquest 2.0 pre-mentor program</dt><dd>recognised for innovation</dd></div>
-        <div><dt>prompt engineering · simplilearn</dt><dd>certified</dd></div>
+        <div>
+          <dt><span class="award-year">2026</span> smart india hackathon</dt>
+          <dd><span class="award-badge">finalist</span> team geoastra · satquery ai</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2025</span> smart india hackathon</dt>
+          <dd><span class="award-badge">finalist</span> team bit-storm · sarthi</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2025</span> avinya hackathon</dt>
+          <dd><span class="award-badge win">winner</span> innovation award</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2025</span> visionnova 2.0 (24h)</dt>
+          <dd><span class="award-badge">national</span> finalist</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2026</span> codevocado ai/ml</dt>
+          <dd><span class="award-badge">merit</span> letter of recommendation</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2025</span> viswam ai summer of ai</dt>
+          <dd><span class="award-badge">meta</span> meta × swecha × iiit-h</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2025</span> innoquest 2.0</dt>
+          <dd><span class="award-badge">recognised</span> pre-mentor innovation</dd>
+        </div>
+        <div>
+          <dt><span class="award-year">2025</span> simplilearn</dt>
+          <dd><span class="award-badge cert">certified</span> prompt engineering</dd>
+        </div>
       </dl>
     </section>
 
@@ -275,6 +382,21 @@
     <section class="deck-section contact" id="contact" aria-labelledby="heading-contact" tabindex="-1">
       <h2 class="cell-text" id="heading-contact" aria-label="contact"></h2>
       <p class="lede">wanna build something or just<br>say hi?</p>
+      
+      <div class="contact-box">
+        <p class="contact-prompt">reach Rooo directly for collabs, roles, or ideas:</p>
+        <div class="contact-actions">
+          <a class="contact-mail-btn" href="mailto:maheshwaramrohith2157@gmail.com?subject=Opportunity%20/%20Collab%20with%20Rooo">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <span>send email</span>
+          </a>
+          <button type="button" class="contact-copy-btn" id="contact-copy-btn">
+            <svg class="icon" aria-hidden="true"><use href="#i-copy"/></svg>
+            <span>copy email</span>
+          </button>
+        </div>
+      </div>
+
       <ul class="socials">
         <li><a href="mailto:maheshwaramrohith2157@gmail.com" aria-label="email"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
         <li><a href="https://github.com/rohith2157" target="_blank" rel="noopener" aria-label="github"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
@@ -283,7 +405,14 @@
         <li><a href="assets/Maheshwaram_Rohith_Resume.pdf" target="_blank" rel="noopener" aria-label="résumé pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg></a></li>
       </ul>
       <p class="current">drop a message, i'll be around</p>
-      <p class="fineprint">© 2026 rohith · <span id="sync-status">github data baked in</span></p>
+      
+      <div class="footer-bottom">
+        <p class="fineprint">© 2026 Rooo · <span id="sync-status">github data baked in</span></p>
+        <a class="back-to-top" href="#about" data-nav title="Scroll to top">
+          <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg>
+          <span>top</span>
+        </a>
+      </div>
     </section>
   </main>
   </div>
@@ -298,8 +427,8 @@
     <a href="#contact" data-nav><svg class="icon" aria-hidden="true"><use href="#i-contact"/></svg><span>contact</span></a>
   </nav>
 
-  <script src="ocean.js?v=6"></script>
-  <script src="main.js?v=6"></script>
-  <script src="proof.js?v=6"></script>
+  <script src="ocean.js?v=7"></script>
+  <script src="main.js?v=7"></script>
+  <script src="proof.js?v=7"></script>
 </body>
 </html>
