@@ -148,7 +148,7 @@ ul { list-style: none; }
 .deck {
   position: fixed; z-index: 1;
   top: 80px; bottom: 108px; left: 0; right: 0;
-  width: min(920px, calc(100% - 48px)); margin-inline: auto;
+  width: min(1160px, calc(100% - 48px)); margin-inline: auto;
   background: var(--deck-bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-deck);
@@ -166,7 +166,7 @@ ul { list-style: none; }
 }
 .deck-scroll {
   position: relative; height: 100%;
-  padding-inline: 48px;
+  padding-inline: 54px;
   overflow-y: auto; overflow-x: hidden;
   overscroll-behavior-y: contain; overflow-anchor: none;
   scroll-behavior: smooth;
@@ -317,7 +317,7 @@ ul { list-style: none; }
   font-family: var(--font-pixel); font-size: 12px; letter-spacing: 0.03em;
   font-variant-numeric: tabular-nums;
 }
-.job-description { max-width: 60ch; font-size: var(--fs-lg); line-height: 1.8; }
+.job-description { max-width: 68ch; font-size: var(--fs-lg); line-height: 1.8; }
 .job-description p { margin: 0 0 var(--s4); }
 
 .job-tags { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s3); margin: var(--s4) 0 var(--s6); }
@@ -407,7 +407,7 @@ ul { list-style: none; }
 .proof-tab:hover { border-color: var(--text-3); }
 .proof-tab[aria-selected="true"] { background: var(--tile-bg); border-color: var(--tile-bg); color: var(--tile-fg); }
 .proof-tab[aria-selected="true"] span { color: var(--tile-fg-2); }
-.proof-intro { margin: 0 0 var(--s6); max-width: 64ch; font-size: var(--fs-md); line-height: 1.8; color: var(--text-2); }
+.proof-intro { margin: 0 0 var(--s6); max-width: 68ch; font-size: var(--fs-md); line-height: 1.8; color: var(--text-2); }
 
 .jd-wrapper { position: relative; width: 100%; }
 .jd {
@@ -667,7 +667,7 @@ ul { list-style: none; }
 .dock {
   position: fixed; z-index: 4; left: 50%; bottom: 18px; transform: translateX(-50%);
   display: grid; grid-template-columns: repeat(var(--count, 6), minmax(44px, 1fr));
-  width: min(780px, calc(100% - 32px));
+  width: min(840px, calc(100% - 32px));
   background: var(--dock-bg);
   backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
