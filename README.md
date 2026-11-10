@@ -19,4 +19,4 @@ python -m http.server 5173
 
 Then open http://localhost:5173.
 
-Deploy: the `rohithportfolio/rohithportfolio.github.io` repository serves `main` with GitHub Pages at https://rohithportfolio.github.io. After changing a CSS or JS file, bump the `?v=` number on its `<link>` or `<script>` tag in `index.html` so visitors don't get a cached copy.
+Deploy: The portfolio is published on GitHub Pages at https://rohith2157.github.io (and repository https://github.com/rohith2157/portfolio). After changing a CSS or JS file, bump the `?v=` number on its `<link>` or `<script>` tag in `index.html` so visitors don't get a cached copy.
