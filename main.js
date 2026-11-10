@@ -286,4 +286,48 @@
       jdTextarea.focus();
     });
   }
+
+  /* ---------- web3forms direct message ---------- */
+  var contactForm = document.getElementById("contact-form");
+  var dmStatus = document.getElementById("dm-status");
+  var dmSubmit = document.getElementById("dm-submit-btn");
+
+  if (contactForm && dmStatus && dmSubmit) {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var btnSpan = dmSubmit.querySelector("span");
+      var originalText = btnSpan ? btnSpan.textContent : "send message";
+      dmSubmit.disabled = true;
+      if (btnSpan) btnSpan.textContent = "sending...";
+      dmStatus.textContent = "";
+      dmStatus.className = "dm-status";
+
+      var formData = new FormData(contactForm);
+
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      })
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        if (data.success) {
+          dmStatus.textContent = "message sent successfully! thanks for reaching out.";
+          dmStatus.className = "dm-status is-success";
+          contactForm.reset();
+          showToast("direct message sent to Rooo's mail!");
+        } else {
+          dmStatus.textContent = data.message || "failed to send message. please try again.";
+          dmStatus.className = "dm-status is-error";
+        }
+      })
+      .catch(function () {
+        dmStatus.textContent = "network error. please email directly.";
+        dmStatus.className = "dm-status is-error";
+      })
+      .finally(function () {
+        dmSubmit.disabled = false;
+        if (btnSpan) btnSpan.textContent = originalText;
+      });
+    });
+  }
 })();
