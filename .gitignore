@@ -4,3 +4,15 @@ SKILL.md
 RESUME_REVIEW.md
 resume/
 geist-mono-latin.woff2
+
+# Agentic engineering & scaffolding artifacts
+AGENTS.md
+TASK_SPEC.md
+GRAPH_SPEC.md
+BOUNDED_LOOP_POLICY.md
+AIRCRAFT_COMMUNICATION_PROTOCOL.md
+VERIFICATION_REPORT.md
+SUMMARY.md
+verify.ps1
+.gnhf/
+
