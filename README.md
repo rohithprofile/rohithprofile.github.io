@@ -1,22 +1,87 @@
-# rohith — portfolio
+# Maheshwaram Rohith — AI/ML Engineer Portfolio
 
-A static site with no build step: an ASCII ocean (fish schools and hammerhead sharks) behind a scrolling panel with about, work, projects, proof, skills, recognition and contact.
+[![Live Site](https://img.shields.io/badge/Live%20Site-rohith2157.github.io-2ea44f?style=flat-square&logo=github)](https://rohith2157.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub%20Pages-blue?style=flat-square&logo=github)](https://rohith2157.github.io/)
+[![Zero Build](https://img.shields.io/badge/Architecture-Zero--Build%20Static-informational?style=flat-square)](https://github.com/rohith2157/portfolio)
+[![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](LICENSE)
 
-- `index.html`: all the content. Edit the text here.
-- `style.css`: design tokens, with light and dark themes.
-- `ocean.js`: the background simulation. Fish flock and flee; sharks hunt; click open water to splash.
-- `main.js`: section navigation, theme and pause toggles, and the GitHub sync. Project cards show live stars, language and last-updated dates from the public GitHub API (cached for an hour, with the values in `index.html` as the fallback).
-- `proof.js`: the proof section.
-  - **fit check:** paste a job description and every requirement is mapped to shipped work, partial experience or an honest gap, with links to the code. Runs entirely in the browser.
-  - **live audit:** a browser-sized port of [BugZero](https://github.com/rohith2157/BUGZERO)'s checks that tests the page you're reading: headings, accessible names, contrast, tap targets, keyboard, links, Core Web Vitals, and a self-healing selector demo.
-- `assets/Maheshwaram_Rohith_Resume.pdf`: the résumé the site links to.
+An interactive, zero-build personal engineering portfolio featuring an ASCII marine life physics simulation, client-side automated job-fit analysis, live in-browser WCAG accessibility audits, and real-time GitHub repository telemetry.
 
-Run it locally:
+---
 
+## 🌐 Live Deployments
+
+- **Primary Site**: [https://rohith2157.github.io/](https://rohith2157.github.io/)
+- **Project Mirror**: [https://rohith2157.github.io/portfolio/](https://rohith2157.github.io/portfolio/)
+- **Alternate Route**: [https://rohith2157.github.io/rohith/](https://rohith2157.github.io/rohith/)
+- **GitHub Repository**: [github.com/rohith2157/portfolio](https://github.com/rohith2157/portfolio)
+
+---
+
+## ⚡ Key Highlights
+
+### 1. ASCII Ocean Physics Simulation (`ocean.js`)
+- **Boids Flocking Algorithm**: Realistic schooling fish that exhibit separation, alignment, and cohesion.
+- **Predator-Prey Mechanics**: Hammerhead sharks dynamically hunt nearby fish, triggering evasive scattering.
+- **Interactive Water Physics**: Direct mouse clicks generate outward splash shockwaves that disrupt schools.
+- **Hardware-Friendly Performance**: Optimized ASCII canvas renderer running 60 FPS with minimal memory overhead and motion-reduction preference detection (`prefers-reduced-motion`).
+
+### 2. Client-Side Job-Fit Analyzer (`proof.js`)
+- Paste any engineering job description directly into the browser.
+- Automatically parses and cross-references requirements against shipped code, quantifiable production metrics, and identified gaps with zero server roundtrips.
+
+### 3. Live Self-Audit Terminal (`proof.js`)
+- An in-browser adaptation of the [BugZero](https://github.com/rohith2157/BUGZERO) testing suite.
+- Audits the live DOM for WCAG 2.1 AA color contrast, ARIA landmarks, heading depth, touch target dimensions, keyboard accessibility, and Core Web Vitals.
+- Demonstrates self-healing CSS selectors directly in an interactive simulated console.
+
+### 4. Dynamic GitHub Telemetry (`main.js`)
+- Real-time stars, primary languages, and commit timestamps fetched dynamically from the public GitHub REST API.
+- In-memory 1-hour cache layer with graceful static fallbacks embedded in `index.html`.
+
+---
+
+## 🛠️ Architecture & File Tour
+
+This portfolio follows a strict **zero-build** philosophy. No Webpack, no Vite, no dependencies to install, and zero compile latency.
+
+```
+portno169/
+├── index.html                           # Semantic HTML5 content & metadata
+├── style.css                            # Design tokens, typography & themes (light/dark)
+├── main.js                              # Theme switching, section routing & GitHub API cache
+├── ocean.js                             # ASCII canvas simulation (flocking boids & predators)
+├── proof.js                             # In-browser job-fit evaluator & live DOM audit
+├── geist-mono-latin.woff2               # Self-hosted monospace font
+└── assets/
+    └── Maheshwaram_Rohith_Resume.pdf    # Full engineering résumé
+```
+
+---
+
+## 🚀 Local Development
+
+Since there is no build step or node package requirements, you can preview the site immediately with any lightweight local web server:
+
+### Using Python:
 ```bash
 python -m http.server 5173
 ```
 
-Then open http://localhost:5173.
+### Using Node / npx:
+```bash
+npx serve . -l 5173
+```
 
-Deploy: The portfolio is published on GitHub Pages at https://rohith2157.github.io (and repository https://github.com/rohith2157/portfolio). After changing a CSS or JS file, bump the `?v=` number on its `<link>` or `<script>` tag in `index.html` so visitors don't get a cached copy.
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+---
+
+## 👤 About the Author
+
+**Maheshwaram Rohith**  
+*AI/ML Engineer · LLMs, RAG, Multi-Agent Systems & Full-Stack*  
+- **GitHub**: [@rohith2157](https://github.com/rohith2157)  
+- **LinkedIn**: [Maheshwaram Rohith](https://www.linkedin.com/in/rohith-maheshwaram-b2777531a)  
+- **Email**: [maheshwaramrohith2157@gmail.com](mailto:maheshwaramrohith2157@gmail.com)  
+- **Location**: Hyderabad, India
